@@ -1,6 +1,7 @@
 import About from "../components/About";
 import Fearures from "../components/Fearures";
 import Hero from "../components/Hero";
+import HowItWork from "../components/HowItWork";
 
 const HomePage = ({ setShowVideo }) => {
   return (
@@ -8,6 +9,7 @@ const HomePage = ({ setShowVideo }) => {
       <Hero setShowVideo={setShowVideo} />
       <Fearures />
       <About />
+      <HowItWork />
     </>
   );
 };
