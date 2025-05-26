@@ -21,6 +21,7 @@ import client_3 from "./client-03.svg";
 import client_4 from "./client-04.svg";
 import client_5 from "./client-05.svg";
 import client_6 from "./client-06.svg";
+import fav_icon from "./favicon.ico";
 
 export const assets = {
   logo,
@@ -46,4 +47,5 @@ export const assets = {
   client_4,
   client_5,
   client_6,
+  fav_icon,
 };
