@@ -55,7 +55,7 @@ const featuresData = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-16 bg-gray-50 dark:bg-[#181c31]">
+    <section id="features" className="py-16 dark:bg-[#181c31]">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center max-w-lg mx-auto mb-12">
