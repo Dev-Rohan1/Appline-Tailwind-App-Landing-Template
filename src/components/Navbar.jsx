@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { Menu, Moon, SunMedium, X } from "lucide-react";
@@ -6,6 +6,7 @@ import { ThemeContext } from "../contexts/ThemeContext";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scroll, setScroll] = useState(false);
   const { darkMode, setDarkMode } = useContext(ThemeContext);
 
   const navLinks = [
@@ -16,13 +17,29 @@ const Navbar = () => {
     { label: "Pages", href: "#pages" },
   ];
 
+  console.log(scroll);
   const toggleMode = () => {
     setDarkMode(!darkMode);
     localStorage.setItem("darkMode", !darkMode);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-white dark:bg-[#181c31]">
+    <header
+      className={`top-0 left-0 w-full z-50 ${
+        scroll
+          ? "fixed bg-white/70 dark:bg-[#181c31]/70 backdrop-blur-md border-b border-gray-100 dark:border-gray-800"
+          : "absolute bg-transparent"
+      }`}
+    >
       <nav className="flex justify-between items-center container mx-auto px-6 lg:px-12 py-4">
         {/* Logo */}
         <Link to="/" onClick={() => setMenuOpen(false)}>
