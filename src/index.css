@@ -6,4 +6,8 @@
   font-family: "Outfit", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
