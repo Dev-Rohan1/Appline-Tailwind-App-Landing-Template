@@ -1,11 +1,10 @@
 import Hero from "../components/Hero";
-import AppLayout from "../layouts/AppLayout";
 
-const HomePage = () => {
+const HomePage = ({ setShowVideo }) => {
   return (
-    <AppLayout>
-      <Hero />
-    </AppLayout>
+    <>
+      <Hero setShowVideo={setShowVideo} />
+    </>
   );
 };
 

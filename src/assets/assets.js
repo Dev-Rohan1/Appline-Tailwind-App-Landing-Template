@@ -22,6 +22,10 @@ import mobile_frame from "./mobile-frame.png";
 import screen_1 from "./screen-1.png";
 import screen_2 from "./screen-2.png";
 import screen_3 from "./screen-3.png";
+import apple_dark from "./apple_dark.png";
+import apple_light from "./apple-white.png";
+import gemini from "./Google-gemini.png";
+import gray_gemini from "./gemini.png";
 
 export const assets = {
   logo,
@@ -48,4 +52,8 @@ export const assets = {
   client_5,
   client_6,
   fav_icon,
+  apple_dark,
+  apple_light,
+  gemini,
+  gray_gemini,
 };
