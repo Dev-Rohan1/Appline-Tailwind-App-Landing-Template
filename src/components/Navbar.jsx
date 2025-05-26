@@ -73,9 +73,7 @@ const Navbar = () => {
             className="lg:hidden w-9 h-9 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer"
             aria-label="Toggle menu"
           >
-            {!menuOpen && (
-              <Menu size={22} className="text-gray-700 dark:text-white" />
-            )}
+            <Menu size={22} className="text-gray-700 dark:text-white" />
           </button>
         </div>
       </nav>
