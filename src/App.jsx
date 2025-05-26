@@ -6,18 +6,22 @@ import SignupPage from "./pages/SignupPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import BlogGridsPage from "./pages/BlogGridsPage";
 import ErrorPage from "./pages/ErrorPage";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/signup" element={<SignupPage />} />
-      <Route path="/blog-details" element={<BlogDetailsPage />} />
-      <Route path="/blog-grids" element={<BlogGridsPage />} />
-      <Route path="404" element={<ErrorPage />} />
-      <Route path="*" element={<ErrorPage />} />
-    </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/blog-details" element={<BlogDetailsPage />} />
+        <Route path="/blog-grids" element={<BlogGridsPage />} />
+        <Route path="404" element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </>
   );
 };
 
