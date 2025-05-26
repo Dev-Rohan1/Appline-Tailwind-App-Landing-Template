@@ -5,3 +5,5 @@
 * {
   font-family: "Outfit", sans-serif;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));

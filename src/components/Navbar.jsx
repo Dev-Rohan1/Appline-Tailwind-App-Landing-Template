@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
-import { Menu, SunMedium, X } from "lucide-react";
+import { Menu, Moon, SunMedium, X } from "lucide-react";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { darkMode, setDarkMode } = useContext(ThemeContext);
 
   const navLinks = [
     { label: "Features", href: "#features" },
@@ -14,13 +16,18 @@ const Navbar = () => {
     { label: "Pages", href: "#pages" },
   ];
 
+  const toggleMode = () => {
+    setDarkMode(!darkMode);
+    localStorage.setItem("darkMode", !darkMode);
+  };
+
   return (
-    <header>
+    <header className="bg-white dark:bg-[#181c31]">
       <nav className="flex justify-between items-center container mx-auto px-6 lg:px-12 py-4">
         {/* Logo */}
         <Link to="/" onClick={() => setMenuOpen(false)}>
           <img
-            src={assets.logo}
+            src={darkMode ? assets.dark_logo : assets.logo}
             alt="logo"
             className="max-w-[140px] sm:max-w-[150px]"
           />
@@ -31,7 +38,7 @@ const Navbar = () => {
           {navLinks.map(({ label, href }) => (
             <li key={href}>
               <a
-                className="text-[17px] hover:text-indigo-500 transition"
+                className="text-[17px] hover:text-indigo-500 dark:text-white transition"
                 href={href}
               >
                 {label}
@@ -41,8 +48,20 @@ const Navbar = () => {
         </ul>
 
         {/* Right Side */}
-        <div className="flex items-center gap-3">
-          <SunMedium className="text-gray-600 hover:text-indigo-600 transition" />
+        <div className="flex items-center gap-2 md:gap-5">
+          {darkMode ? (
+            <Moon
+              className="text-white cursor-pointer"
+              onClick={() => toggleMode()}
+              size={22}
+            />
+          ) : (
+            <SunMedium
+              className="text-gray-600 cursor-pointer"
+              onClick={() => toggleMode()}
+              size={22}
+            />
+          )}
 
           <button className="hidden lg:block bg-indigo-400 text-white text-[15px] py-1 px-4 rounded font-medium hover:bg-indigo-500 transition cursor-pointer">
             Log In
@@ -51,31 +70,37 @@ const Navbar = () => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMenuOpen((prev) => !prev)}
-            className="lg:hidden w-9 h-9 flex items-center justify-center rounded hover:bg-gray-100 transition cursor-pointer"
+            className="lg:hidden w-9 h-9 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer"
             aria-label="Toggle menu"
           >
-            {!menuOpen && <Menu size={22} className="text-gray-700" />}
+            {!menuOpen && (
+              <Menu size={22} className="text-gray-700 dark:text-white" />
+            )}
           </button>
         </div>
       </nav>
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white border-r border-gray-200 z-50 transform ${
+        className={`fixed top-0 left-0 h-full w-64 bg-white dark:bg-[#181c31] border-r border-gray-200 dark:border-gray-700 z-50 transform ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out flex flex-col pt-6`}
       >
         {/* Mobile Header */}
         <div className="flex items-center justify-between px-6 mb-6">
           <Link to="/" onClick={() => setMenuOpen(false)}>
-            <img src={assets.logo} alt="logo" className="max-w-[120px]" />
+            <img
+              src={darkMode ? assets.dark_logo : assets.logo}
+              alt="logo"
+              className="max-w-[120px]"
+            />
           </Link>
           <button
             onClick={() => setMenuOpen(false)}
-            className="w-9 h-9 flex items-center justify-center rounded hover:bg-gray-100 transition cursor-pointer"
+            className="w-9 h-9 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer"
             aria-label="Close menu"
           >
-            <X size={21} className="text-gray-600" />
+            <X size={21} className="text-gray-600 dark:text-white" />
           </button>
         </div>
 
@@ -85,7 +110,7 @@ const Navbar = () => {
             <a
               key={href}
               href={href}
-              className="font-medium text-gray-800 hover:text-indigo-600 transition"
+              className="font-medium text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition"
               onClick={() => setMenuOpen(false)}
             >
               {label}
