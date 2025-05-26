@@ -17,7 +17,6 @@ const Navbar = () => {
     { label: "Pages", href: "#pages" },
   ];
 
-  console.log(scroll);
   const toggleMode = () => {
     setDarkMode(!darkMode);
     localStorage.setItem("darkMode", !darkMode);
@@ -34,10 +33,10 @@ const Navbar = () => {
 
   return (
     <header
-      className={`top-0 left-0 w-full z-50 ${
+      className={`top-0 left-0 w-full ${
         scroll
-          ? "fixed bg-white/70 dark:bg-[#181c31]/70 backdrop-blur-md border-b border-gray-100 dark:border-gray-800"
-          : "absolute bg-transparent"
+          ? "fixed bg-white/[0.97] dark:bg-[#181c31]/[0.97] z-50 border-b border-gray-200 dark:border-gray-700"
+          : "absolute bg-transparent z-40"
       }`}
     >
       <nav className="flex justify-between items-center container mx-auto px-6 lg:px-12 py-4">
@@ -69,13 +68,13 @@ const Navbar = () => {
           {darkMode ? (
             <SunMedium
               className="text-white cursor-pointer"
-              onClick={() => toggleMode()}
+              onClick={toggleMode}
               size={22}
             />
           ) : (
             <Moon
               className="text-gray-600 cursor-pointer"
-              onClick={() => toggleMode()}
+              onClick={toggleMode}
               size={22}
             />
           )}
@@ -86,7 +85,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Toggle */}
           <button
-            onClick={() => setMenuOpen((prev) => !prev)}
+            onClick={() => setMenuOpen(true)}
             className="lg:hidden w-9 h-9 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer"
             aria-label="Toggle menu"
           >
@@ -146,7 +145,6 @@ const Navbar = () => {
         <div
           className="fixed inset-0 backdrop-blur-[2px] z-40"
           onClick={() => setMenuOpen(false)}
-          aria-hidden="true"
         />
       )}
     </header>

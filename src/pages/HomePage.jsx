@@ -4,9 +4,6 @@ const HomePage = ({ setShowVideo }) => {
   return (
     <>
       <Hero setShowVideo={setShowVideo} />
-      <Hero setShowVideo={setShowVideo} />
-      <Hero setShowVideo={setShowVideo} />
-      <Hero setShowVideo={setShowVideo} />
     </>
   );
 };
