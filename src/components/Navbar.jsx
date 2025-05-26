@@ -48,7 +48,7 @@ const Navbar = () => {
         </ul>
 
         {/* Right Side */}
-        <div className="flex items-center gap-2 md:gap-5">
+        <div className="flex items-center gap-3 md:gap-4">
           {darkMode ? (
             <Moon
               className="text-white cursor-pointer"
