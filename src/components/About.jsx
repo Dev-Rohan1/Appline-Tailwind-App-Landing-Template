@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-[#181c31]">
+    <section id="about" className="py-20 dark:bg-[#181c31]">
       <div className="container mx-auto px-6 lg:px-12 space-y-30">
         {/* Section 1 */}
         <div className="flex flex-col lg:flex-row items-center gap-12 relative">
