@@ -1,5 +1,4 @@
-import React from "react";
-import { Download, CircleUser, HeartHandshake } from "lucide-react";
+import { CircleUser, Download, HeartHandshake } from "lucide-react";
 
 const workData = [
   {
@@ -27,7 +26,7 @@ const workData = [
 
 const HowItWork = () => {
   return (
-    <section id="features" className="py-16 dark:bg-[#181c31]">
+    <section id="how-it-works" className="py-16 dark:bg-[#181c31]">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-12">
