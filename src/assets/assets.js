@@ -26,6 +26,7 @@ import apple_dark from "./apple_dark.png";
 import apple_light from "./apple-white.png";
 import gemini from "./Google-gemini.png";
 import gray_gemini from "./gemini.png";
+import play_store from "./playstore.png";
 
 export const assets = {
   logo,
@@ -56,4 +57,5 @@ export const assets = {
   apple_light,
   gemini,
   gray_gemini,
+  play_store,
 };

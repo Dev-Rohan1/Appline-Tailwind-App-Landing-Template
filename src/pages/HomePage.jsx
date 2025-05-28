@@ -1,5 +1,6 @@
 import About from "../components/About";
 import AppScreenshot from "../components/AppScreenshot";
+import Download from "../components/Download";
 import Fearures from "../components/Fearures";
 import Hero from "../components/Hero";
 import HowItWork from "../components/HowItWork";
@@ -14,6 +15,7 @@ const HomePage = ({ setShowVideo }) => {
       <HowItWork />
       <Price />
       <AppScreenshot />
+      <Download />
     </>
   );
 };
