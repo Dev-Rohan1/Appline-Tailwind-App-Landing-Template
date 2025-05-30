@@ -1,6 +1,7 @@
 import About from "../components/About";
 import AppScreenshot from "../components/AppScreenshot";
 import Blog from "../components/Blog";
+import Brand from "../components/Brand";
 import ClientSay from "../components/ClientSay";
 import Download from "../components/Download";
 import Faq from "../components/faq";
@@ -22,6 +23,7 @@ const HomePage = ({ setShowVideo }) => {
       <ClientSay />
       <Faq />
       <Blog />
+      <Brand />
     </>
   );
 };
