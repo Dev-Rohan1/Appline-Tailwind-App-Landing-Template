@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { assets, blogs } from "../assets/assets";
 import { CalendarDays, CircleUserRound } from "lucide-react";
 
@@ -38,9 +39,12 @@ const Blog = () => {
                 </div>
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 cursor-pointer hover:text-indigo-400 transition-colors">
+                <Link
+                  to={"/blog-details"}
+                  className="text-lg font-semibold text-gray-900 dark:text-white mb-2 cursor-pointer hover:text-indigo-400 transition-colors"
+                >
                   {blog.title}
-                </h3>
+                </Link>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
                   {blog.description}
                 </p>

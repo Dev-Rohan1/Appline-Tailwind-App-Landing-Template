@@ -11,7 +11,7 @@ import { assets } from "../assets/assets";
 const BlogDetailsPage = () => {
   return (
     <section className="min-h-screen pt-30 pb-20 bg-white dark:bg-[#181c31] text-gray-800 dark:text-white">
-      <div className="max-w-4xl mx-auto px-6 lg:px-12">
+      <div className="max-w-5xl mx-auto px-6 lg:px-12">
         {/* Blog Image */}
         <div className="mb-10">
           <img
