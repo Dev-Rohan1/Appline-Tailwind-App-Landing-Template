@@ -28,6 +28,15 @@ import screen_1 from "./screen-1.png";
 import screen_2 from "./screen-2.png";
 import screen_3 from "./screen-3.png";
 
+import {
+  Layers,
+  LayoutTemplate,
+  Gauge,
+  SlidersHorizontal,
+  RefreshCcw,
+  PencilRuler,
+} from "lucide-react";
+
 export const assets = {
   logo,
   dark_logo,
@@ -157,5 +166,49 @@ export const faqs = [
     title: "Do you work with international clients?",
     description:
       "Absolutely! We collaborate with clients around the world using digital tools to ensure seamless communication.",
+  },
+];
+export const featuresData = [
+  {
+    id: 1,
+    icon: <PencilRuler className="w-8 h-8" />,
+    title: "Crafted for App Landing",
+    description:
+      "Tailored sections and structure designed specifically for showcasing mobile and web apps effectively.",
+  },
+  {
+    id: 2,
+    icon: <Layers className="w-8 h-8" />,
+    title: "High-quality Design",
+    description:
+      "Pixel-perfect layouts with sleek visuals that look professional across all devices.",
+  },
+  {
+    id: 3,
+    icon: <LayoutTemplate className="w-8 h-8" />,
+    title: "All Essential Sections",
+    description:
+      "Includes everything from feature highlights to testimonials and FAQs—ready to go.",
+  },
+  {
+    id: 4,
+    icon: <Gauge className="w-8 h-8" />,
+    title: "Speed Optimized",
+    description:
+      "Built with performance in mind to ensure fast load times and smooth user experience.",
+  },
+  {
+    id: 5,
+    icon: <SlidersHorizontal className="w-8 h-8" />,
+    title: "Fully Customizable",
+    description:
+      "Easily adapt layout, colors, fonts, and components to match your unique brand.",
+  },
+  {
+    id: 6,
+    icon: <RefreshCcw className="w-8 h-8" />,
+    title: "Regular Updates",
+    description:
+      "Stay current with continuous improvements, feature additions, and best practices.",
   },
 ];
