@@ -3,6 +3,7 @@ import AppScreenshot from "../components/AppScreenshot";
 import Blog from "../components/Blog";
 import Brand from "../components/Brand";
 import ClientSay from "../components/ClientSay";
+import ContectFrom from "../components/ContectFrom";
 import Download from "../components/Download";
 import Faq from "../components/faq";
 import Fearures from "../components/Fearures";
@@ -24,6 +25,7 @@ const HomePage = ({ setShowVideo }) => {
       <Faq />
       <Blog />
       <Brand />
+      <ContectFrom/>
     </>
   );
 };
