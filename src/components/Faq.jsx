@@ -1,5 +1,5 @@
 import { Minus, Plus } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
