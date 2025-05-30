@@ -7,7 +7,7 @@ const Hero = ({ setShowVideo }) => {
   const { darkMode } = useContext(ThemeContext);
 
   return (
-    <section className="bg-white dark:bg-[#181c31] pt-[100px] pb-[60px]">
+    <section className="bg-white dark:bg-[#181c31] pt-[150px] pb-[60px]">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Left Content */}
@@ -66,7 +66,7 @@ const Hero = ({ setShowVideo }) => {
           <div className="w-full lg:w-1/2 relative flex justify-center mt-10 lg:mt-0">
             <div className="relative z-10">
               <img
-                className="w-full max-w-md relative"
+                className="w-full max-w-sm relative"
                 src={assets.hero_image}
                 alt="Hero"
               />
