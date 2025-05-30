@@ -27,6 +27,7 @@ import play_store from "./playstore.png";
 import screen_1 from "./screen-1.png";
 import screen_2 from "./screen-2.png";
 import screen_3 from "./screen-3.png";
+import error_image from "./error.png";
 
 import {
   Layers,
@@ -67,6 +68,7 @@ export const assets = {
   gemini,
   gray_gemini,
   play_store,
+  error_image,
 };
 
 export const navLinks = [
