@@ -74,3 +74,33 @@ export const pagesLinks = [
   { label: "Log In", to: "/login" },
   { label: "Sign Up", to: "/signup" },
 ];
+
+export const blogs = [
+  {
+    id: 1,
+    title: "Boost Your Brand with Smart Online Marketing",
+    description:
+      "Discover how targeted online strategies can elevate your brand and reach new audiences effectively.",
+    userName: "Sarah Lee",
+    date: "20 Apr, 2025",
+    image: assets.blog_image_1,
+  },
+  {
+    id: 2,
+    title: "Master UI/UX with These Essential Techniques",
+    description:
+      "Get practical tips on improving your design workflow and creating better user experiences.",
+    userName: "Carlos Gomez",
+    date: "10 May, 2025",
+    image: assets.blog_image_2,
+  },
+  {
+    id: 3,
+    title: "Write Cleaner Code with These Best Practices",
+    description:
+      "Improve your programming efficiency and maintainability with these essential coding principles.",
+    userName: "Emily Chen",
+    date: "28 May, 2025",
+    image: assets.blog_image_3,
+  },
+];

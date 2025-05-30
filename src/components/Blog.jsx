@@ -1,37 +1,7 @@
-import { assets } from "../assets/assets";
+import { assets, blogs } from "../assets/assets";
 import { CalendarDays, CircleUserRound } from "lucide-react";
 
 const Blog = () => {
-  const blogs = [
-    {
-      id: 1,
-      title: "Boost Your Brand with Smart Online Marketing",
-      description:
-        "Discover how targeted online strategies can elevate your brand and reach new audiences effectively.",
-      userName: "Sarah Lee",
-      date: "20 Apr, 2025",
-      image: assets.blog_image_1,
-    },
-    {
-      id: 2,
-      title: "Master UI/UX with These Essential Techniques",
-      description:
-        "Get practical tips on improving your design workflow and creating better user experiences.",
-      userName: "Carlos Gomez",
-      date: "10 May, 2025",
-      image: assets.blog_image_2,
-    },
-    {
-      id: 3,
-      title: "Write Cleaner Code with These Best Practices",
-      description:
-        "Improve your programming efficiency and maintainability with these essential coding principles.",
-      userName: "Emily Chen",
-      date: "28 May, 2025",
-      image: assets.blog_image_3,
-    },
-  ];
-
   return (
     <section className="py-16 bg-white dark:bg-[#181c31]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12">
