@@ -138,3 +138,24 @@ export const clients = [
     name: "Justin Farnandes",
   },
 ];
+
+export const faqs = [
+  {
+    id: 1,
+    title: "What services do you offer?",
+    description:
+      "We offer digital product design, branding, and development services tailored to startups and growing businesses.",
+  },
+  {
+    id: 2,
+    title: "How long does a project typically take?",
+    description:
+      "Project duration depends on complexity, but most branding and website projects are completed within 4–6 weeks.",
+  },
+  {
+    id: 3,
+    title: "Do you work with international clients?",
+    description:
+      "Absolutely! We collaborate with clients around the world using digital tools to ensure seamless communication.",
+  },
+];
