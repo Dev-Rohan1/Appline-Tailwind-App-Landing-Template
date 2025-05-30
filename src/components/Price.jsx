@@ -1,48 +1,7 @@
 import { CheckCheck } from "lucide-react";
+import { plans } from "../assets/assets";
 
 const Price = () => {
-  const plans = [
-    {
-      id: 1,
-      category: "Free",
-      subtitle: "Perfect for individuals getting started.",
-      price: 0,
-      bgColor: "bg-gray-800",
-      features: [
-        "60-day chat history",
-        "15 GB cloud storage",
-        "24/7 Support",
-        "Custom Branding Strategy",
-      ],
-    },
-    {
-      id: 2,
-      category: "Unlimited",
-      subtitle: "Great for growing teams and businesses.",
-      price: 35,
-      bgColor: "bg-indigo-500",
-      features: [
-        "Unlimited chat history",
-        "100 GB cloud storage",
-        "Priority Support",
-        "Advanced Branding Tools",
-      ],
-    },
-    {
-      id: 3,
-      category: "Business",
-      subtitle: "Ideal for large organizations.",
-      price: 59,
-      bgColor: "bg-gray-800",
-      features: [
-        "Unlimited chat history",
-        "1 TB cloud storage",
-        "Dedicated Account Manager",
-        "Full Branding Suite",
-      ],
-    },
-  ];
-
   return (
     <section className="py-16 dark:bg-[#181c31]">
       <div className="container mx-auto px-6 lg:px-12">

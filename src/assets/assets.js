@@ -171,44 +171,85 @@ export const faqs = [
 export const featuresData = [
   {
     id: 1,
-    icon: <PencilRuler className="w-8 h-8" />,
+    icon: PencilRuler,
     title: "Crafted for App Landing",
     description:
       "Tailored sections and structure designed specifically for showcasing mobile and web apps effectively.",
   },
   {
     id: 2,
-    icon: <Layers className="w-8 h-8" />,
+    icon: Layers,
     title: "High-quality Design",
     description:
       "Pixel-perfect layouts with sleek visuals that look professional across all devices.",
   },
   {
     id: 3,
-    icon: <LayoutTemplate className="w-8 h-8" />,
+    icon: LayoutTemplate,
     title: "All Essential Sections",
     description:
       "Includes everything from feature highlights to testimonials and FAQs—ready to go.",
   },
   {
     id: 4,
-    icon: <Gauge className="w-8 h-8" />,
+    icon: Gauge,
     title: "Speed Optimized",
     description:
       "Built with performance in mind to ensure fast load times and smooth user experience.",
   },
   {
     id: 5,
-    icon: <SlidersHorizontal className="w-8 h-8" />,
+    icon: SlidersHorizontal,
     title: "Fully Customizable",
     description:
       "Easily adapt layout, colors, fonts, and components to match your unique brand.",
   },
   {
     id: 6,
-    icon: <RefreshCcw className="w-8 h-8" />,
+    icon: RefreshCcw,
     title: "Regular Updates",
     description:
       "Stay current with continuous improvements, feature additions, and best practices.",
+  },
+];
+export const plans = [
+  {
+    id: 1,
+    category: "Free",
+    subtitle: "Perfect for individuals getting started.",
+    price: 0,
+    bgColor: "bg-gray-800",
+    features: [
+      "60-day chat history",
+      "15 GB cloud storage",
+      "24/7 Support",
+      "Custom Branding Strategy",
+    ],
+  },
+  {
+    id: 2,
+    category: "Unlimited",
+    subtitle: "Great for growing teams and businesses.",
+    price: 35,
+    bgColor: "bg-indigo-500",
+    features: [
+      "Unlimited chat history",
+      "100 GB cloud storage",
+      "Priority Support",
+      "Advanced Branding Tools",
+    ],
+  },
+  {
+    id: 3,
+    category: "Business",
+    subtitle: "Ideal for large organizations.",
+    price: 59,
+    bgColor: "bg-gray-800",
+    features: [
+      "Unlimited chat history",
+      "1 TB cloud storage",
+      "Dedicated Account Manager",
+      "Full Branding Suite",
+    ],
   },
 ];

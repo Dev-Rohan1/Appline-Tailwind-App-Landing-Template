@@ -1,4 +1,5 @@
 import React from "react";
+import { featuresData } from "../assets/assets";
 
 const Features = () => {
   return (
@@ -17,19 +18,19 @@ const Features = () => {
 
         {/* Features Grid */}
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {featuresData.map((feature) => (
+          {featuresData.map(({ id, icon: Icon, title, description }) => (
             <div
-              key={feature.id}
-              className="p-6 bg-white dark:bg-[#1e293b] rounded-2xl shadow-xs hover:shadow-md border border-gray-200 dark:border-gray-700 transition-all duration-300"
+              key={id}
+              className="p-6 bg-white dark:bg-[#1e293b] rounded-2xl shadow-xs border border-gray-200 dark:border-gray-700 transition-all duration-300"
             >
               <div className="mb-4 w-16 h-16 flex items-center justify-center rounded-xl text-[#7083f5] hover:bg-[#7083f5] hover:text-white dark:bg-[#2a2e44] dark:text-white transition-colors">
-                {feature.icon}
+                <Icon className="w-8 h-8" /> {/* Capitalized */}
               </div>
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                {feature.title}
+                {title}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                {feature.description}
+                {description}
               </p>
             </div>
           ))}
