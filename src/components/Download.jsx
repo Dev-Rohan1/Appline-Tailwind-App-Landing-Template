@@ -11,7 +11,7 @@ const Download = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
           {/* Left Content */}
           <div className="w-full lg:w-1/2">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-900 dark:text-white mb-6 max-w-xl">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-800 dark:text-white mb-6 max-w-xl">
               Download Appline Now & Get started for free.
             </h1>
             <p className="text-gray-600 dark:text-gray-400 text-base sm:text-lg mb-8 max-w-lg">

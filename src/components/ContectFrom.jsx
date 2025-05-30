@@ -4,7 +4,7 @@ const ContactForm = () => {
   return (
     <section id="support" className="py-16 dark:bg-[#181c31]">
       <div className="container mx-auto px-6 lg:px-12">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 dark:text-white mb-4">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 dark:text-white mb-4">
           Let's Stay Connected
         </h2>
         <p className="text-center max-w-2xl mx-auto text-gray-600 dark:text-gray-400 mb-10">

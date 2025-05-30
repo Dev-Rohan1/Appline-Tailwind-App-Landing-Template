@@ -15,7 +15,7 @@ const Hero = ({ setShowVideo }) => {
             <h3 className="text-xl text-gray-700 dark:text-gray-300">
               Ready to Use Tailwind CSS Web Template.
             </h3>
-            <h1 className="text-4xl sm:text-5xl font-bold mt-4 leading-tight mb-6 text-gray-900 dark:text-white">
+            <h1 className="text-4xl sm:text-5xl font-bold mt-4 leading-tight mb-6 text-gray-800 dark:text-white">
               Tailwind Template for{" "}
               <span className="text-indigo-400">App & Software</span> Site.
             </h1>
