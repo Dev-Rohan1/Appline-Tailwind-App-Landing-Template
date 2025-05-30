@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import { Menu, Moon, SunMedium, X } from "lucide-react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
-import { Menu, Moon, SunMedium, X } from "lucide-react";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 const Navbar = () => {
