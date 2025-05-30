@@ -9,6 +9,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Navbar from "./components/Navbar";
 import Video from "./components/Video";
 import { ChevronUp } from "lucide-react";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -58,6 +59,7 @@ const App = () => {
         <Route path="/404" element={<ErrorPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 };

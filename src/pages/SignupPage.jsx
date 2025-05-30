@@ -1,6 +1,8 @@
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const SignupPage = () => {
-  return <div>SignupPage</div>;
+  return <>SignupPage</>;
 };
 
 export default SignupPage;
