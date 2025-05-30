@@ -1,43 +1,8 @@
 import React from "react";
-import { assets } from "../assets/assets";
+import { assets, clients } from "../assets/assets";
 import { Star } from "lucide-react";
 
 const ClientSay = () => {
-  const clients = [
-    {
-      id: 1,
-      image: assets.author_1,
-      description:
-        "Appline has transformed the way I manage my projects. It's intuitive, fast, and packed with features that make my workflow seamless.",
-      title: "Web Entrepreneur",
-      name: "Musharof Chowdhury",
-    },
-    {
-      id: 2,
-      image: assets.author_2,
-      description:
-        "The design and user experience of this app are top-notch. It feels modern and helps me stay organized without any hassle.",
-      title: "Product Designer",
-      name: "Naimur Rahman",
-    },
-    {
-      id: 3,
-      image: assets.author_3,
-      description:
-        "From development to deployment, Appline makes the entire process smoother. I highly recommend it for any app developer.",
-      title: "App Developer",
-      name: "Devid Miller",
-    },
-    {
-      id: 4,
-      image: assets.author_4,
-      description:
-        "With Appline, I've been able to streamline my SEO campaigns and track results more efficiently. It’s a must-have tool!",
-      title: "SEO Expert",
-      name: "Justin Farnandes",
-    },
-  ];
-
   return (
     <section className="py-16 bg-white dark:bg-[#181c31]">
       <div className="container mx-auto px-6 lg:px-12">

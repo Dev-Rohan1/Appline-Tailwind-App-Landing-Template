@@ -83,7 +83,7 @@ export const blogs = [
       "Discover how targeted online strategies can elevate your brand and reach new audiences effectively.",
     userName: "Sarah Lee",
     date: "20 Apr, 2025",
-    image: assets.blog_image_1,
+    image: blog_image_1,
   },
   {
     id: 2,
@@ -92,7 +92,7 @@ export const blogs = [
       "Get practical tips on improving your design workflow and creating better user experiences.",
     userName: "Carlos Gomez",
     date: "10 May, 2025",
-    image: assets.blog_image_2,
+    image: blog_image_2,
   },
   {
     id: 3,
@@ -101,6 +101,40 @@ export const blogs = [
       "Improve your programming efficiency and maintainability with these essential coding principles.",
     userName: "Emily Chen",
     date: "28 May, 2025",
-    image: assets.blog_image_3,
+    image: blog_image_3,
+  },
+];
+export const clients = [
+  {
+    id: 1,
+    image: author_1,
+    description:
+      "Appline has transformed the way I manage my projects. It's intuitive, fast, and packed with features that make my workflow seamless.",
+    title: "Web Entrepreneur",
+    name: "Musharof Chowdhury",
+  },
+  {
+    id: 2,
+    image: author_2,
+    description:
+      "The design and user experience of this app are top-notch. It feels modern and helps me stay organized without any hassle.",
+    title: "Product Designer",
+    name: "Naimur Rahman",
+  },
+  {
+    id: 3,
+    image: author_3,
+    description:
+      "From development to deployment, Appline makes the entire process smoother. I highly recommend it for any app developer.",
+    title: "App Developer",
+    name: "Devid Miller",
+  },
+  {
+    id: 4,
+    image: author_4,
+    description:
+      "With Appline, I've been able to streamline my SEO campaigns and track results more efficiently. It’s a must-have tool!",
+    title: "SEO Expert",
+    name: "Justin Farnandes",
   },
 ];
