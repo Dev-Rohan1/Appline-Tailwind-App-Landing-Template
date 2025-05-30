@@ -2,7 +2,7 @@
 import { ChevronDown, Menu, Moon, SunMedium, X } from "lucide-react";
 import { useContext, useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { assets } from "../assets/assets";
+import { assets, navLinks, pagesLinks } from "../assets/assets";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 const Navbar = () => {
@@ -12,21 +12,6 @@ const Navbar = () => {
   const [mobilePagesOpen, setMobilePagesOpen] = useState(false);
   const { darkMode, setDarkMode } = useContext(ThemeContext);
   const dropdownRef = useRef(null);
-
-  const navLinks = [
-    { label: "Features", href: "#features" },
-    { label: "About", href: "#about" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Support", href: "#support" },
-  ];
-
-  const pagesLinks = [
-    { label: "Blog Grids", to: "/blog-grids" },
-    { label: "Blog Details", to: "/blog-details" },
-    { label: "404 Error", to: "/404" },
-    { label: "Log In", to: "/login" },
-    { label: "Sign Up", to: "/signup" },
-  ];
 
   const toggleMode = () => {
     const newMode = !darkMode;
