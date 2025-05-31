@@ -20,7 +20,7 @@ const Features = () => {
 
         {/* Features Grid */}
         <motion.div
-          variants={SlideLeft(0.5)}
+          variants={SlideLeft(0.3)}
           initial="hidden"
           whileInView={"visible"}
           className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
