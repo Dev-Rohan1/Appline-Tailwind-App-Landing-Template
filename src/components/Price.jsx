@@ -1,7 +1,13 @@
 import { CheckCheck } from "lucide-react";
 import { plans } from "../assets/assets";
+import { motion } from "framer-motion";
 
 const Price = () => {
+  const variants = {
+    hidden: { opacity: 0, y: 200 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <section className="py-16 dark:bg-[#181c31]">
       <div className="container mx-auto px-6 lg:px-12">
@@ -14,7 +20,13 @@ const Price = () => {
             out or need enterprise-level features, we've got you covered.
           </p>
         </div>
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ type: "spring", stiffness: 50, delay: 0.2 }}
+          className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {plans.map((plan) => (
             <div
               key={plan.id}
@@ -48,7 +60,7 @@ const Price = () => {
               </button>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
