@@ -1,8 +1,14 @@
 import { CalendarDays, CircleUserRound } from "lucide-react";
 import { Link } from "react-router-dom";
 import { blogs } from "../assets/assets";
+import { motion } from "framer-motion";
 
 const Blog = () => {
+  const variants = {
+    hidden: { opacity: 0, y: 200 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <section className="py-16 bg-white dark:bg-[#181c31]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12">
@@ -15,7 +21,13 @@ const Blog = () => {
           leaders.
         </p>
 
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ type: "spring", stiffness: 50, delay: 0.2 }}
+          className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {blogs.map((blog) => (
             <div
               key={blog.id}
@@ -51,7 +63,7 @@ const Blog = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
