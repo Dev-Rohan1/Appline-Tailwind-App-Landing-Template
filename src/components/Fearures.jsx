@@ -1,5 +1,7 @@
 import React from "react";
 import { featuresData } from "../assets/assets";
+import { motion } from "framer-motion";
+import { SlideLeft } from "../utils/Animation";
 
 const Features = () => {
   return (
@@ -17,7 +19,12 @@ const Features = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          variants={SlideLeft(0.5)}
+          initial="hidden"
+          whileInView={"visible"}
+          className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {featuresData.map(({ id, icon: Icon, title, description }) => (
             <div
               key={id}
@@ -34,7 +41,7 @@ const Features = () => {
               </p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
