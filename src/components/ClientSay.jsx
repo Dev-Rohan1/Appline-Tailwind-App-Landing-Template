@@ -1,6 +1,8 @@
 import React from "react";
 import { assets, clients } from "../assets/assets";
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
+import { SlideLeft, slideRigth } from "../utils/Animation";
 
 const ClientSay = () => {
   return (
@@ -15,7 +17,12 @@ const ClientSay = () => {
           world.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <motion.div
+          variants={slideRigth(0.3)}
+          initial="hidden"
+          whileInView="visible"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-8"
+        >
           {clients.map((client) => (
             <div
               key={client.id}
@@ -54,7 +61,7 @@ const ClientSay = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

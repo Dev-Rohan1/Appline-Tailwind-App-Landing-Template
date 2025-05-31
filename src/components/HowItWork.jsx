@@ -1,5 +1,5 @@
-import { CircleUser, Download, HeartHandshake } from "lucide-react";
 import { motion } from "framer-motion";
+import { CircleUser, Download, HeartHandshake } from "lucide-react";
 import { slideRigth } from "../utils/Animation";
 
 const workData = [

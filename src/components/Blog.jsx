@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { assets, blogs } from "../assets/assets";
 import { CalendarDays, CircleUserRound } from "lucide-react";
+import { Link } from "react-router-dom";
+import { blogs } from "../assets/assets";
 
 const Blog = () => {
   return (

@@ -1,6 +1,6 @@
+import { motion } from "framer-motion";
 import { CheckCheck } from "lucide-react";
 import { plans } from "../assets/assets";
-import { motion } from "framer-motion";
 
 const Price = () => {
   const variants = {

@@ -1,16 +1,29 @@
 import React, { useContext } from "react";
 import { assets } from "../assets/assets";
 import { ThemeContext } from "../contexts/ThemeContext";
+import { motion } from "framer-motion";
 
 const Download = () => {
   const { darkMode } = useContext(ThemeContext);
+
+  const variants = {
+    hidden: { opacity: 0, x: -200 },
+    visible: { opacity: 1, x: 0 },
+  };
 
   return (
     <section className="bg-white dark:bg-[#181c31] pt-[100px] pb-[60px]">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
           {/* Left Content */}
-          <div className="w-full lg:w-1/2">
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ type: "spring", stiffness: 50, delay: 0.2 }}
+            div
+            className="w-full lg:w-1/2"
+          >
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-800 dark:text-white mb-6 max-w-xl">
               Download Appline Now & Get started for free.
             </h1>
@@ -40,10 +53,15 @@ const Download = () => {
                 </div>
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Image */}
-          <div className="w-full lg:w-1/2 relative flex justify-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ stiffness: 50, delay: 0.1 }}
+            className="w-full lg:w-1/2 relative flex justify-center"
+          >
             <div className="relative z-10 max-w-sm w-full">
               <img
                 className="w-full rounded-lg"
@@ -71,7 +89,7 @@ const Download = () => {
               }}
               className="hidden md:block absolute top-[20px] w-[500px] h-[500px] z-0 rounded-full opacity-50 pointer-events-none"
             ></div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
