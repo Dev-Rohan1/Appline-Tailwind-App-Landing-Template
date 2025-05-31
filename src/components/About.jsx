@@ -1,4 +1,6 @@
 import { assets } from "../assets/assets";
+import { motion } from "framer-motion";
+import { SlideUp } from "../utils/Animation";
 
 const About = () => {
   return (
@@ -7,7 +9,12 @@ const About = () => {
         {/* Section 1 */}
         <div className="flex flex-col lg:flex-row items-center gap-12 relative">
           {/* Image Section */}
-          <div className="w-full lg:w-1/2 flex justify-center relative">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ stiffness: 50, delay: 0.1 }}
+            className="w-full lg:w-1/2 flex justify-center relative"
+          >
             <div className="relative z-10">
               <img
                 className="w-full max-w-md"
@@ -36,25 +43,45 @@ const About = () => {
               }}
               className="hidden md:block absolute bottom-[-40px] w-[430px] h-[400px] z-0 rounded-2xl pointer-events-none"
             ></div>
-          </div>
+          </motion.div>
 
           {/* Text Section */}
           <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
-            <h3 className="text-indigo-500 text-lg font-medium">
+            <motion.h3
+              variants={SlideUp(0.5)}
+              initial="hidden"
+              whileInView="visible"
+              className="text-indigo-500 text-lg font-medium"
+            >
               Track Audience Activities
-            </h3>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">
+            </motion.h3>
+            <motion.h2
+              variants={SlideUp(0.5)}
+              initial="hidden"
+              whileInView="visible"
+              className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white"
+            >
               Monitor Engagement & Optimize Outreach
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300">
+            </motion.h2>
+            <motion.p
+              variants={SlideUp(0.5)}
+              initial="hidden"
+              whileInView="visible"
+              className="text-gray-600 dark:text-gray-300"
+            >
               Easily monitor how your audience interacts with your content.
               Leverage detailed analytics to post at peak engagement times and
               build smarter strategies that drive results.
-            </p>
+            </motion.p>
 
             {/* Features List */}
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
+              <motion.div
+                variants={SlideUp(0.6)}
+                initial="hidden"
+                whileInView="visible"
+                className="flex items-start gap-4"
+              >
                 <div className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200 dark:border-gray-700 text-indigo-600 text-xl font-bold shrink-0">
                   01
                 </div>
@@ -67,9 +94,14 @@ const About = () => {
                     AI-powered predictions and smart scheduling tools.
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex items-start gap-4">
+              <motion.div
+                variants={SlideUp(0.7)}
+                initial="hidden"
+                whileInView="visible"
+                className="flex items-start gap-4"
+              >
                 <div className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200 dark:border-gray-700 text-indigo-600 text-xl font-bold shrink-0">
                   02
                 </div>
@@ -82,7 +114,7 @@ const About = () => {
                     behavior patterns, and improve targeting accuracy.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -91,24 +123,49 @@ const About = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center gap-12 relative">
           {/* Text Section */}
           <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
-            <h3 className="text-indigo-500 text-lg font-medium">
+            <motion.h3
+              variants={SlideUp(0.5)}
+              initial="hidden"
+              whileInView="visible"
+              className="text-indigo-500 text-lg font-medium"
+            >
               Create Audience Reports
-            </h3>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">
+            </motion.h3>
+            <motion.h2
+              variants={SlideUp(0.5)}
+              initial="hidden"
+              whileInView="visible"
+              className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white"
+            >
               Know More About Your Audience.
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300">
+            </motion.h2>
+            <motion.p
+              variants={SlideUp(0.5)}
+              initial="hidden"
+              whileInView="visible"
+              className="text-gray-600 dark:text-gray-300"
+            >
               Schedule your posts for times when your audience is most active.
               Choose from our best-time predictions, or create your own
               publishing schedule.
-            </p>
-            <button className="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-2 rounded-lg transition-colors duration-300">
+            </motion.p>
+            <motion.button
+              variants={SlideUp(0.7)}
+              initial="hidden"
+              whileInView="visible"
+              className="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-2 rounded-lg transition-colors duration-300"
+            >
               Know More
-            </button>
+            </motion.button>
           </div>
 
           {/* Image Section */}
-          <div className="w-full lg:w-1/2 flex justify-center relative">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ stiffness: 50, delay: 0.1 }}
+            className="w-full lg:w-1/2 flex justify-center relative"
+          >
             <div className="relative z-10">
               <img
                 className="w-full max-w-md"
@@ -137,7 +194,7 @@ const About = () => {
               }}
               className="hidden md:block absolute bottom-[-40px] w-[430px] h-[400px] z-0 rounded-2xl pointer-events-none"
             ></div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
