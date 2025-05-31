@@ -1,4 +1,6 @@
 import { CircleUser, Download, HeartHandshake } from "lucide-react";
+import { motion } from "framer-motion";
+import { slideRigth } from "../utils/Animation";
 
 const workData = [
   {
@@ -40,7 +42,12 @@ const HowItWork = () => {
         </div>
 
         {/* works Grid */}
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          variants={slideRigth(0.3)}
+          initial="hidden"
+          whileInView="visible"
+          className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {workData.map((work) => (
             <div
               key={work.id}
@@ -57,7 +64,7 @@ const HowItWork = () => {
               </p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
