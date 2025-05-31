@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SignupPage = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-30 pb-20 dark:bg-[#181c31] bg-white">
+    <section className="min-h-screen flex items-center justify-center pt-30 pb-20 dark:bg-[#181c31] bg-white px-6 lg:px-12 py-4">
       <div className="w-full max-w-md p-8 rounded-2xl border border-gray-300 dark:border-gray-700  dark:bg-[#1f243a] text-gray-900 dark:text-white">
         <h2 className="text-2xl font-bold mb-6 text-center">
           Sign up for an account
