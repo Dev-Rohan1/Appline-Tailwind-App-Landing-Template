@@ -1,12 +1,101 @@
-# React + Vite
+# React Tailwind Web Tamplate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Modern React website with Tailwind CSS & Framer Motion. 🌗 Responsive design with light/dark mode toggle. ⚡ Powered by React Router DOM for seamless navigation.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend:** [Vercel Deployment Link](https://appline-tailwind-app-landing-template.vercel.app)
 
-## Expanding the ESLint configuration
+## 📱Website Screenshot
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![App Screenshot](<https://raw.githubusercontent.com/Dev-Rohan1/banner/refs/heads/main/Untitled%20design%20(1).jpg?token=GHSAT0AAAAAADD5M2MOJZYMPOWH5TJH5PVA2B3GRWQ>)
+
+## ⚙️ Tech Stack
+
+### 🧩 Frontend
+
+| Tech                 | Purpose                             |
+| -------------------- | ----------------------------------- |
+| **React (Vite)**     | Fast and modern frontend framework  |
+| **Tailwind CSS**     | Utility-first CSS framework         |
+| **React Router DOM** | Client-side routing                 |                      |
+| **Context API**      | State management (no Redux/Zustand) |                     |
+| **Lucide React**      | Icon set                            |
+| **Framer Motion**    | Animations                          |
+
+---
+
+## ✨Features
+
+📱 Fully Responsive – Seamless experience across all screen sizes
+
+🌗 Light & Dark Mode – User-friendly theme toggle for better accessibility
+
+🧩 Reusable Components – Clean, modular code for easy customization
+
+⚡ Fast & Lightweight – Built with performance in mind
+
+🎯 Modern & Minimal UI – Sleek design with focus on clarity and usability
+
+🔐 Accessible by Default – Follows best practices for inclusive design
+
+---
+
+## 🚀 Deployment
+
+| Service    | Purpose          |
+| ---------- | ---------------- |
+| **Vercel** | Frontend Hosting |
+
+---
+
+## 🧪 Development Tools
+
+| Tool       | Purpose         |
+| ---------- | --------------- |
+| **GitHub** | Version Control |
+
+---
+
+## 📁 Project Structure
+
+```text
+root/
+│
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── pages/
+│   ├── utils/
+│   ├── main.jsx
+│   └── App.jsx
+│
+├── gitignore
+├── eslintrc.js
+├── index.html
+├── tailwind.config.js
+├── vercel.json
+├── package.json
+├── package-lock.json
+└── README.md
+
+
+```
+
+---
+### Run frontend 
+
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
