@@ -7,7 +7,6 @@ import Faq from "../components/Faq";
 import ContectFrom from "../components/ContectFrom";
 import Download from "../components/Download";
 import Fearures from "../components/Fearures";
-import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import HowItWork from "../components/HowItWork";
 import Price from "../components/Price";
@@ -27,7 +26,6 @@ const HomePage = ({ setShowVideo }) => {
       <Blog />
       <Brand />
       <ContectFrom />
-      <Footer />
     </>
   );
 };
