@@ -31,7 +31,7 @@ const App = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-white dark:bg-[#0f172a] text-gray-800 dark:text-white">
+    <div className="relative min-h-screen bg-white dark:bg-[#0f172a] text-gray-800 dark:text-white overflow-hidden ">
       {/* Back to Top Button */}
       {isScrolled && (
         <button
