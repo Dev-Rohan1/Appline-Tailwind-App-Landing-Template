@@ -3,9 +3,16 @@ import { ThemeContext } from "../contexts/ThemeContext";
 import { assets } from "../assets/assets";
 import { Link } from "react-router-dom";
 import { Facebook, Github, Linkedin, Twitter } from "lucide-react";
+import { motion } from "framer-motion";
+import { slideRigth, SlideUp } from "../utils/Animation";
 
 const Footer = () => {
   const { darkMode } = useContext(ThemeContext);
+
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <>
@@ -15,7 +22,12 @@ const Footer = () => {
           darkMode ? "bg-gray-900 text-white" : "bg-gray-50 text-gray-800"
         } border-t border-gray-200 dark:border-t-0`}
       >
-        <div className="container mx-auto px-6 lg:px-12">
+        <motion.div
+          variants={slideRigth(0.3)}
+          initial="hidden"
+          whileInView="visible"
+          className="container mx-auto px-6 lg:px-12"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_2fr] gap-12">
             {/* Logo and Description */}
             <div>
@@ -77,7 +89,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </footer>
 
       {/* Bottom Footer Bar */}
@@ -86,7 +98,13 @@ const Footer = () => {
           darkMode ? "bg-[#181c31] text-white" : "bg-indigo-500 text-white"
         }`}
       >
-        <div className="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ type: "spring", stiffness: 50, delay: 0.2 }}
+          className="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4"
+        >
           {/* Copyright */}
           <p className="text-sm text-center md:text-left">
             © 2025 Appline. All rights reserved.
@@ -117,7 +135,7 @@ const Footer = () => {
               Terms & Conditions
             </a>
           </div>
-        </div>
+        </motion.div>
       </footer>
     </>
   );
