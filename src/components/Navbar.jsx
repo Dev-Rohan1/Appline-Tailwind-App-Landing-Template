@@ -142,9 +142,12 @@ const Navbar = () => {
               onKeyDown={(e) => e.key === "Enter" && toggleMode()}
             />
           )}
-          <button className="hidden lg:block bg-indigo-400 text-white text-[15px] py-1 px-4 rounded font-medium hover:bg-indigo-500 transition">
+          <Link
+            to="/login"
+            className="hidden lg:block bg-indigo-400 text-white text-[15px] py-1 px-4 rounded font-medium hover:bg-indigo-500 transition"
+          >
             Log In
-          </button>
+          </Link>
           <button
             onClick={() => setMenuOpen(true)}
             className="lg:hidden w-9 h-9 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition"
